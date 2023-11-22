@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+}
+
+.eyes {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.eye {
+  width: 260px;
+  height: 100px;
+  display: inline-block;
+  margin: 120px;
+  position: relative;
+  overflow: hidden;
+  background: #e2e2e2;
+  border-radius: 200%;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(4deg); /* Rotate left eye slightly clockwise */
+}
+
+/* Right eye, rotate counterclockwise */
+.eye:nth-child(2) {
+  transform: rotate(-4deg); /* Rotate right eye slightly counterclockwise */
+}
+
+/* Outer circle (red eye) with the single dot */
+.ball {
+  width: 105px;
+  height: 105px;
+  background: #ac2222; /* Red pupils */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #000000; /* Adjust the shadow size as needed */
+
+  /* Add a thin ring around the center pupil */
+  &::before {
+    content: '';
+    width: 71px; /* Adjust the size of the ring as needed */
+    height: 71px; /* Adjust the size of the ring as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1.5px solid #000000; /* Adjust the ring thickness and color */
+    background: transparent;
+  }
+
+  /* Create the first dot on the middle ring (4 o'clock) */
+  .dot.dot-4 {
+    content: '';
+    width: 16px; /* Adjust the size of the dot as needed */
+    height: 16px; /* Adjust the size of the dot as needed */
+    position: absolute;
+    top: 58%; /* 4 o'clock position */
+    left: 73%; /* Center the dot horizontally */
+    border-radius: 50%;
+    background: #000; /* Black dot */
+  }
+
+  /* Create the third dot on the middle ring (8 o'clock) */
+  .dot.dot-8 {
+    content: '';
+    width: 16px; /* Adjust the size of the dot as needed */
+    height: 16px; /* Adjust the size of the dot as needed */
+    position: absolute;  
+    top: 61%; /* 8 o'clock position */
+    left: 12%; /* 8 o'clock position */
+    border-radius: 50%;
+    background: #000; /* Black dot */
+  }
+
+  /* Create the second dot on the middle ring (12 o'clock) */
+  .dot.dot-12 {
+    content: '';
+    width: 16px; /* Adjust the size of the dot as needed */
+    height: 16px; /* Adjust the size of the dot as needed */
+    position: absolute;
+    top: 8%; /* 12 o'clock position */
+    left: 40%; /* Center the third dot horizontally */
+    border-radius: 50%;
+    background: #000; /* Black dot */
+  }
+
+}
+
+/* Inner circle (smaller black pupil) */
+.pupil {
+  width: 15px; /* Adjust the size as needed */
+  height: 15px; /* Adjust the size as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #000;
+  background: #000; /* Background color for the pupil */
+}
