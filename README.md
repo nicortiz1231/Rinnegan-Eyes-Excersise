@@ -1,4 +1,4 @@
-# Rinnegan-Eyes-Excercise
+# Rinnegan-Eyes-Exercise
 
 This is my version #2 of the Eye Movement exercise from MIT xPro course.
 
